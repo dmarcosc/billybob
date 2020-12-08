@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 import HomePage from './views/HomePage.vue';
 
 export default {

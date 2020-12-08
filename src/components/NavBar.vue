@@ -4,15 +4,23 @@
               :class="{ 'home-button':changeLogo , 'home-button american': !changeLogo }">
       </button>
       <ul class="nav-bar-left">
-        <li>
+        <li :class="{'nav-bar-li open':isOpen ,'nav-bar-li close': !isOpen }">
+          <span v-if='isOpen'>
+            OPEN <br> NOW !
+          </span>
+          <span v-if='!isOpen'>
+            CLOSED <p style="font-size:9px;">We'll be back in {{time}}</p>
+          </span>
+        </li>
+        <li class="nav-bar-li">
           <span>
             OUR <br> CHALLENGE
           </span>
           <span>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-trophy"></i>
           </span>
         </li>
-        <li>
+        <li class="nav-bar-li">
           <span>
             FOOD <br> & DRINK
           </span>
@@ -22,7 +30,7 @@
         </li>
       </ul>
       <ul class="nav-bar-right">
-        <li>
+        <li class="nav-bar-li">
           <span>
           CONTACT <br>& LOCATION
           </span>
@@ -30,7 +38,7 @@
             <i class="fas fa-phone-alt"></i>
           </span>
         </li>
-        <li>
+        <li class="nav-bar-li">
           <span>
             GALLERY <br> & ABOUT
           </span>
@@ -38,7 +46,7 @@
             <i class="fas fa-camera"></i>
           </span>
         </li>
-         <li class="social-media">
+         <li class="nav-bar-li social-media">
           <span >
           Follow us on Social Media
           <a href="https://www.instagram.com/billybob_oviedo/"><img src="../assets/images/ig.svg" class="nav-bar-icon"></a>
@@ -52,28 +60,49 @@
       </div>
     </nav>
 </template>
-
 <script>
+import moment from 'moment/moment';
+
 export default {
   name: 'NavBar',
-  props: {
-  },
   data() {
     return {
       changeLogo: true,
+      isOpen: console.log(moment().isBetween(moment().endOf('day'), moment().endOf('day').add(-4, 'hours'))),
+      time: this.calculareDiff(),
     };
+  },
+  methods: {
+    calculareDiff() {
+      this.fmsToHMS(moment().clone().endOf('day').add(-4, 'hours')
+        .diff(moment()));
+    },
+    fmsToHMS(ms) {
+      let seconds = ms / 1000;
+      const hours = parseInt((ms / 1000) / 3600, 10);
+      seconds %= 3600;
+      const minutes = parseInt(seconds / 60, 10);
+      seconds %= 60;
+      this.time = (`${hours}:${minutes}:${Math.trunc(seconds)}`);
+    },
+  },
+  mounted() {
+    this.timer = setInterval(() => this.calculareDiff(), 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.timer);
   },
 };
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
 /**************GLOBALS***************/
 .nav-bar{
 display:flex;
 align-items: center;
 justify-content: center;
 height:100px;
-padding:10px;
 color:white;
 font-weight: 600;
 font-size:20px;
@@ -89,6 +118,16 @@ top:0;
   li{
   width:100px !important;
   margin: 0px 5px !important
+  }
+}
+@media screen and (max-width: 860px) {
+  .open,.close,.social-media{
+  display:none;
+  }
+}
+@media screen and (max-width: 400px) {
+  li{
+  margin: 0px !important
   }
 }
 .language-div{
@@ -141,11 +180,11 @@ margin:30px 0px 0px 90px;
 display:flex;
 text-align: center;
 flex:1;
-justify-content: start;
+justify-content: flex-start;
 padding:0;
 align-items: center;
 }
-li{
+.nav-bar-li{
   list-style-type: none;
   height:60px;
   width:140px;
@@ -154,7 +193,7 @@ li{
   cursor: pointer;
   margin:0 15px;
 }
-li>span{
+.nav-bar-li>span{
   display:flex;
   height:100%;
   width:100%;
@@ -163,19 +202,51 @@ li>span{
   text-align: center;
   transition: 0.5s;
 }
-li>span:nth-child(1){
+.nav-bar-li>span:nth-child(1){
   color:white;
 }
-li>span:nth-child(2){
+.nav-bar-li>span:nth-child(2){
   background:yellow;
   color:black;
 }
-li:hover span{
+.nav-bar-li:hover span{
   transform:translateY(-100%)
 }
-a{
-  color:white;
+/*******OPEN-CLOSE**********/
+.open{
+  cursor:default;
+  border: 2px solid rgb(243, 97, 199);
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 25px #ff00de;
+  -webkit-text-fill-color: #F4ECFF;
+  -webkit-text-stroke-color:#C546F7;
+  -webkit-text-stroke-width:0.2px;
 }
+.open:hover span{
+  transform:none;
+}
+.close{
+  cursor:default;
+  border: 2px solid rgb(105, 202, 235) ;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+.close>span{
+  display: block;
+  padding-top: 7px;
+}
+.close:hover span{
+  transform:none;
+}
+
 /**************SOCIAL-MEDIA***************/
 .nav-bar-icon{
   width:25px;
