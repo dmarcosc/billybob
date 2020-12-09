@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <main>
+    <NavBar />
     <HomePage />
     </main>
   </div>
@@ -8,11 +9,13 @@
 
 <script lang="js">
 import HomePage from './views/HomePage.vue';
+import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
     HomePage,
+    NavBar,
   },
 };
 </script>
@@ -34,10 +37,9 @@ main {
   /* background:url('./assets/images/murocola.jpg'),url('./assets/images/pizzeria.jpg'),
   url('./assets/images/muroHojas.jpg');
   background-position:0px 0px, 600px 0px,1300px 0px; */
-  background:url('./assets/images/tablones5.jpg');
+  /* background:url('./assets/images/tablones5.jpg'); */
   /* background-repeat: no-repeat; */
   background-size: contain;
-  min-height: 1000px;
   margin:0 auto;
 }
 </style>

@@ -68,7 +68,7 @@ export default {
   data() {
     return {
       changeLogo: true,
-      isOpen: console.log(moment().isBetween(moment().endOf('day'), moment().endOf('day').add(-4, 'hours'))),
+      isOpen: moment().isBetween(moment('20:00:00', 'HH:mm:ss'), moment('23:59:59', 'HH:mm:ss')),
       time: this.calculareDiff(),
     };
   },
@@ -96,9 +96,9 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
 /**************GLOBALS***************/
 .nav-bar{
+z-index: 3;
 display:flex;
 align-items: center;
 justify-content: center;
@@ -145,7 +145,7 @@ top:0;
 /**************HOME BUTTON***************/
 .home-button{
   cursor:pointer;
-  background: url(../assets/images/logo.jpg) no-repeat;
+  background: url('~@/assets/images/logo.jpg') no-repeat;
    background-size: contain;
   width:170px;
   height:170px;
@@ -159,11 +159,11 @@ top:0;
 .american{
  background-size: 120% !important;
  background-position: center !important;
-  background: url(../assets/images/logo3.jpg) no-repeat;
+  background: url('~@/assets/images/logo3.jpg') no-repeat;
 }
 .home-button:hover{
-width:180px;
-height:180px;
+width:182px;
+height:182px;
 }
 /**************NAVIGATION***************/
 .nav-bar-left{
@@ -206,7 +206,7 @@ align-items: center;
   color:white;
 }
 .nav-bar-li>span:nth-child(2){
-  background:yellow;
+  background : rgb(245, 245, 65);
   color:black;
 }
 .nav-bar-li:hover span{
@@ -254,7 +254,7 @@ align-items: center;
 }
 .social-media{
   font-size: 10px;
-  border: 1px solid yellow;
+  border: 1px solid rgb(245, 245, 65);;
   cursor:default;
 }
  .social-media:hover span{
