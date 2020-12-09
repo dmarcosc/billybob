@@ -22,9 +22,10 @@ export default {
 
 <style>
 body {
-  background:linear-gradient(to bottom, black , #020024);
-  min-height: 100%;
+  background:black;
+  height: 100%;
   width: 100%;
+  display:flex;
   position:absolute;
   /* background-attachment: fixed; */
   margin: 0;
@@ -41,5 +42,6 @@ main {
   /* background-repeat: no-repeat; */
   background-size: contain;
   margin:0 auto;
+  height: 100%;
 }
 </style>

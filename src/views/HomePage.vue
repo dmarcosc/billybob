@@ -11,7 +11,6 @@
   <div class="mid-landing">
   </div>
   <div class="bottom-landing">
-    <!-- <hr class="hr-bottom-landing"> -->
     <div class="bottom-landing-div">
       <div class="bottom-landing-cards">
         <p class="titles-bottom-cards">OPENING HOURS</p>
@@ -31,9 +30,8 @@
         <p>984 49 63 02 <i class="fas fa-phone-alt"></i></p>
         <p>billyboboviedo@gmail.com <i class="fas fa-envelope solid"></i></p>
       </div>
-      <div class="bottom-landing-cards bottom-logo">
-      </div>
     </div>
+    <div class=bottom-logo></div>
   </div>
   </div>
 </template>
@@ -51,8 +49,9 @@ export default {
   width:100%
 }
 .landing{
- height:85vh;
- background: rgb(245, 245, 65);
+ height:90vh;
+ /* background: rgb(245, 245, 65); */
+ background: #F9C00E;
  display:flex;
  justify-content: center;
  align-items: center;
@@ -65,41 +64,41 @@ export default {
    border: 2px solid black;
 }
 .mid-landing{
-  height:70vh;
-  background: black;
+  height:80vh;
+  background: white;
 
 }
 /******BOTTOM**********/
 .bottom-landing{
-  padding-top:5em;
-  height:100%;
-  background: white;
+  height:270px;
+  background: black;
+  color:white;
   border-top:3px solid black;
   display:flex;
   justify-content: flex-end;
 
 }
-.hr-bottom-landing{
-  border:solid 1px black;
-  margin-top:60px;
-}
 .bottom-landing-div{
+  padding-top:5em;
   display:flex;
-  margin-right: 3em;
 }
 .bottom-landing-cards{
-  width:270px;
   font-size: 12px;
+  margin-right:40px;
 }
 .titles-bottom-cards{
   font-size:14px;
   font-weight: bold;
 }
 .bottom-logo{
-  background: url('~@/assets/images/logo.jpg') no-repeat;
-  background-size: contain;
-  width:190px;
-  height:190px;
+  margin-top:60px;
+  margin-right:20px;
+  padding:0;
+  width:170px;
+  height:170px;
+  background-size: 120% !important;
+ background-position: center !important;
+  background: url('~@/assets/images/logo3.jpg') no-repeat;
   border-radius: 110px;
 }
 @media  screen and (max-width:1520px) {
@@ -109,11 +108,8 @@ export default {
   .titles-bottom-cards{
     font-size:12px;
   }
-  .bottom-landing-div{
-     margin-right: 0px;
-  }
   .bottom-landing-cards{
-    width:200px;
+    margin-right:20px;;
   }
   .bottom-logo{
     width:120px;
@@ -122,7 +118,7 @@ export default {
 /******BURGER********/
 .burger-home{
   position: absolute;
-  top:30px;
+  top:100px;
   z-index:1;
   height: 180vh;
 }

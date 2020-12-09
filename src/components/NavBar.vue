@@ -111,7 +111,7 @@ position: fixed;
 width: 100%;
 top:0;
 }
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1350px) {
   .nav-bar{
   font-size:12px;
   }
@@ -191,7 +191,7 @@ align-items: center;
   overflow: hidden;
   z-index: 15;
   cursor: pointer;
-  margin:0 15px;
+  margin:0px 30px 10px 30px;
 }
 .nav-bar-li>span{
   display:flex;
@@ -206,7 +206,7 @@ align-items: center;
   color:white;
 }
 .nav-bar-li>span:nth-child(2){
-  background : rgb(245, 245, 65);
+ background: #F9C00E;
   color:black;
 }
 .nav-bar-li:hover span{
@@ -254,7 +254,7 @@ align-items: center;
 }
 .social-media{
   font-size: 10px;
-  border: 1px solid rgb(245, 245, 65);;
+  border: 1px solid #F9C00E;
   cursor:default;
 }
  .social-media:hover span{
