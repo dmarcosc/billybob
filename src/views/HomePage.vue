@@ -9,29 +9,15 @@
          <span style='color:red; cursor:pointer;'>greasy</span></p>
     </div>
   <div class="mid-landing">
+    <h1 class="mid-landing-h1">American Diner & Bar</h1>
+    <div class="mid-landing-div"><p class="left-mid-landing"></p>
+    <p class="right-mid-landing"> ipsum wa orokanaru otouto yo,
+       sole ni wa a ore ni kateru no wa ore dake da one does not simply walk into mordor
+       have you heard any news from the other provinces ? nothing
+        id like to talk abour my dear friend</p></div>
   </div>
   <div class="bottom-landing">
-    <div class="bottom-landing-div">
-      <div class="bottom-landing-cards">
-        <p class="titles-bottom-cards">OPENING HOURS</p>
-        <br>
-        <p>SUND-THU______________20:00-00:00</p>
-        <p>FRI-SAT________________20:00-00:30</p>
-      </div>
-      <div class="bottom-landing-cards">
-        <p class="titles-bottom-cards">LOCATIONS</p>
-        <br>
-        <p>Calle Fray Ceferino, 11, 33001 Oviedo, Asturias</p>
-        <p>Calle Magdalena, 20, 33009 Oviedo, Asturias</p>
-      </div>
-      <div class="bottom-landing-cards">
-        <p class="titles-bottom-cards">CONTACT</p>
-        <br>
-        <p>984 49 63 02 <i class="fas fa-phone-alt"></i></p>
-        <p>billyboboviedo@gmail.com <i class="fas fa-envelope solid"></i></p>
-      </div>
-    </div>
-    <div class=bottom-logo></div>
+    <div style="padding:10em;">hola existo</div>
   </div>
   </div>
 </template>
@@ -40,12 +26,13 @@
 
 export default {
   name: 'HomePage',
+  components: {
+  },
 };
 </script>
 
 <style scoped>
 .home{
-  height:100%;
   width:100%
 }
 .landing{
@@ -59,7 +46,7 @@ export default {
 }
 .landing-text{
   color:black;
-  font-size:60px;
+  font-size:70px;
   /* margin-left:15em; */
   padding-top:6em;
   text-align: right;
@@ -68,57 +55,36 @@ export default {
   font-size:25px;
    text-align: right;
 }
+/******mid section**********/
 .mid-landing{
-  height:80vh;
+  height:100%;
   background: white;
+}
+.mid-landing-h1{
+margin:0;
+font-size:60px;
+padding-top:4em;
+display:flex;
+justify-content: center;
+margin-left:10.6em;
+}
+.mid-landing-div{
+ display: flex;
 
+}
+.left-mid-landing{
+  width:54%;
+}
+.right-mid-landing{
+  font-size:25px;
+width:500px;
 }
 /******BOTTOM**********/
 .bottom-landing{
-  height:270px;
-  background: black;
+   height:100%;
+   background: red;
   color:white;
-  border-top:3px solid black;
   display:flex;
-  justify-content: flex-end;
-
-}
-.bottom-landing-div{
-  padding-top:5em;
-  display:flex;
-}
-.bottom-landing-cards{
-  font-size: 12px;
-  margin-right:40px;
-}
-.titles-bottom-cards{
-  font-size:14px;
-  font-weight: bold;
-}
-.bottom-logo{
-  margin-top:60px;
-  margin-right:20px;
-  padding:0;
-  width:170px;
-  height:170px;
-  background-size: 120% !important;
- background-position: center !important;
-  background: url('~@/assets/images/logo3.jpg') no-repeat;
-  border-radius: 110px;
-}
-@media  screen and (max-width:1520px) {
-  .bottom-landing-cards{
-  font-size:10px;
-  }
-  .titles-bottom-cards{
-    font-size:12px;
-  }
-  .bottom-landing-cards{
-    margin-right:20px;;
-  }
-  .bottom-logo{
-    width:120px;
-  }
 }
 /******BURGER********/
 .burger-home{
@@ -126,7 +92,5 @@ export default {
   top:100px;
   z-index:1;
   height: 180vh;
-}
-.big-burger{
 }
 </style>

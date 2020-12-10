@@ -3,6 +3,7 @@
     <main>
     <NavBar />
     <HomePage />
+    <Footer style="z-index:6;" />
     </main>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script lang="js">
 import HomePage from './views/HomePage.vue';
 import NavBar from './components/NavBar.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     HomePage,
     NavBar,
+    Footer,
   },
 };
 </script>
