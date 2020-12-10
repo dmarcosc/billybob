@@ -39,11 +39,11 @@
           </span>
         </li>
         <li class="nav-bar-li">
-          <span>
-            GALLERY <br> & ABOUT
+          <span style="background:red;">
+            DELIVERY
           </span>
-          <span>
-            <i class="fas fa-camera"></i>
+          <span style="background:white;justify-content:start;">
+            <i class="fas fa-biking fa-2x"></i>
           </span>
         </li>
          <li class="nav-bar-li social-media">
@@ -211,6 +211,10 @@ align-items: center;
 }
 .nav-bar-li:hover span{
   transform:translateY(-100%)
+}
+.nav-bar-li:hover .svg-inline--fa.fa-biking.fa-w-20.fa-2x{
+  transform:translateX(300%);
+  transition: 4s;
 }
 /*******OPEN-CLOSE**********/
 .open{
