@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-bar">
-    <button @click="changeLogo=!changeLogo"
+    <button
               :class="{ 'home-button':changeLogo , 'home-button american': !changeLogo }">
       </button>
       <ul class="nav-bar-left">
@@ -105,7 +105,7 @@ justify-content: center;
 height:100px;
 color:white;
 font-weight: 600;
-font-size:20px;
+font-size:25px;
 background: black;
 position: fixed;
 width: 100%;
@@ -113,7 +113,7 @@ top:0;
 }
 @media screen and (max-width: 1350px) {
   .nav-bar{
-  font-size:12px;
+  font-size:16px;
   }
   li{
   width:100px !important;
@@ -213,15 +213,20 @@ align-items: center;
   transform:translateY(-100%)
 }
 .nav-bar-li:hover .svg-inline--fa.fa-biking.fa-w-20.fa-2x{
-  transform:translateX(300%);
-  transition: 4s;
+  /* transform:translateX(300%); */
+  animation:
+    animate-x 1s linear infinite alternate;
 }
+@keyframes animate-x {
+  from { transform: translateX(0%); } to { transform: translateX(180%); }
+}
+
 /*******OPEN-CLOSE**********/
 .open{
   cursor:default;
   border: 2px solid rgb(243, 97, 199);
   color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 25px #ff00de;
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 25px #ff00de;
   -webkit-text-fill-color: #F4ECFF;
   -webkit-text-stroke-color:#C546F7;
   -webkit-text-stroke-width:0.2px;

@@ -31,7 +31,7 @@ body {
   margin: 0;
 }
 main {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "HWT Artz", Helvetica, Arial, sans-serif;
   width: 100%;
   position:absolute;
   /* background:url('./assets/images/calleh.jpg'); */

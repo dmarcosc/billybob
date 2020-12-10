@@ -4,9 +4,9 @@
       <img src="../assets/images/floatingburger.png" class="burger-home">
      </div>
     <div class="landing">
-      <div class="landing-text">
-      IT'S BURGER O'CLOCK
-     </div>
+      <h1 class="landing-text">IT'S BURGER O'CLOCK</h1>
+      <p class="greasy">warning! things may get
+         <span style='color:red; cursor:pointer;'>greasy</span></p>
     </div>
   <div class="mid-landing">
   </div>
@@ -52,16 +52,21 @@ export default {
  height:90vh;
  /* background: rgb(245, 245, 65); */
  background: #F9C00E;
- display:flex;
- justify-content: center;
- align-items: center;
+ text-align: center;
  font-weight: bold;
+ font-family: "HWT Artz";
+ padding:0 6em;
 }
 .landing-text{
   color:black;
-  font-size:44px;
-  margin-left:500px;
-   border: 2px solid black;
+  font-size:60px;
+  /* margin-left:15em; */
+  padding-top:6em;
+  text-align: right;
+}
+.greasy{
+  font-size:25px;
+   text-align: right;
 }
 .mid-landing{
   height:80vh;
