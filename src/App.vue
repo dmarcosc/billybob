@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <main>
     <NavBar />
+    <main>
     <HomePage />
-    <Footer style="z-index:6;" />
+     <Footer />
     </main>
   </div>
 </template>
@@ -11,7 +11,7 @@
 <script lang="js">
 import HomePage from './views/HomePage.vue';
 import NavBar from './components/NavBar.vue';
-import Footer from './components/Footer.vue';
+import Footer from './components/FooterBar.vue';
 
 export default {
   name: 'App',
@@ -32,11 +32,13 @@ body {
   position:absolute;
   /* background-attachment: fixed; */
   margin: 0;
+  font-family: "HWT Artz", Helvetica, Arial, sans-serif;
+}
+#app{
+   width: 100%;
 }
 main {
-  font-family: "HWT Artz", Helvetica, Arial, sans-serif;
   width: 100%;
-  position:absolute;
   /* background:url('./assets/images/calleh.jpg'); */
   /* background:url('./assets/images/murocola.jpg'),url('./assets/images/pizzeria.jpg'),
   url('./assets/images/muroHojas.jpg');

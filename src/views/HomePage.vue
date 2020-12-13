@@ -4,20 +4,27 @@
       <img src="../assets/images/floatingburger.png" class="burger-home">
      </div>
     <div class="landing">
-      <h1 class="landing-text">IT'S BURGER O'CLOCK</h1>
-      <p class="greasy">warning! things may get
-         <span style='color:red; cursor:pointer;'>greasy</span></p>
+      <div class="top-container">
+        <h1 class="landing-text">IT'S BURGER O'CLOCK</h1>
+        <p class="greasy">warning! things may get
+          <span style='color:red; cursor:pointer;'>greasy</span>
+        </p>
+      </div>
     </div>
   <div class="mid-landing">
-    <h1 class="mid-landing-h1">American Diner & Bar</h1>
-    <div class="mid-landing-div"><p class="left-mid-landing"></p>
-    <p class="right-mid-landing"> ipsum wa orokanaru otouto yo,
-       sole ni wa a ore ni kateru no wa ore dake da one does not simply walk into mordor
-       have you heard any news from the other provinces ? nothing
-        id like to talk abour my dear friend</p></div>
+    <div class="mid-container">
+      <h1 class="mid-landing-h1">
+        American Diner & Bar
+      </h1>
+      <p class="mid-landing-p"> ipsum wa orokanaru otouto yo,
+        sole ni wa a ore ni kateru no wa ore dake da one does not simply walk into mordor
+        have you heard any news from the other provinces ? nothing
+        id like to talk abour my dear friend
+      </p>
+    </div>
   </div>
   <div class="bottom-landing">
-    <div style="padding:10em;">hola existo</div>
+    <div class="bot-container">hola existo</div>
   </div>
   </div>
 </template>
@@ -33,56 +40,55 @@ export default {
 
 <style scoped>
 .home{
-  width:100%
+  width:100%;
 }
+/**TOP CONTAINER */
 .landing{
- height:90vh;
- /* background: rgb(245, 245, 65); */
+ height:80vh;
  background: #F9C00E;
- text-align: center;
+ text-align: right;
+ display:flex;
+ justify-content: flex-end;
+ align-items: center;
  font-weight: bold;
  font-family: "HWT Artz";
- padding:0 6em;
+ /* padding-right:4em; */
+ margin-top:100px;
+}
+.top-container{
+  padding-right: 4em;
 }
 .landing-text{
   color:black;
   font-size:70px;
-  /* margin-left:15em; */
-  padding-top:6em;
-  text-align: right;
 }
 .greasy{
   font-size:25px;
-   text-align: right;
 }
+
 /******mid section**********/
 .mid-landing{
-  height:100%;
+  height:80vh;
+  width:100%;
   background: white;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.mid-container{
+  flex:0.5;
 }
 .mid-landing-h1{
-margin:0;
 font-size:60px;
-padding-top:4em;
-display:flex;
-justify-content: center;
-margin-left:10.6em;
 }
-.mid-landing-div{
- display: flex;
-
-}
-.left-mid-landing{
-  width:54%;
-}
-.right-mid-landing{
+.mid-landing-p{
   font-size:25px;
-width:500px;
 }
 /******BOTTOM**********/
 .bottom-landing{
-   height:100%;
-   background: red;
+   height:60vh;
+  width:100%;
+  background: red;
   color:white;
   display:flex;
 }

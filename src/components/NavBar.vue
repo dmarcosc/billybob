@@ -43,7 +43,7 @@
             DELIVERY
           </span>
           <span style="background:white;justify-content:start;">
-            <i class="fas fa-biking fa-2x"></i>
+            <i class="fas fa-biking fa-lg"></i>
           </span>
         </li>
          <li class="nav-bar-li social-media">
@@ -167,22 +167,22 @@ height:182px;
 }
 /**************NAVIGATION***************/
 .nav-bar-left{
-margin:30px 90px 0px 0px;
 display:flex;
 text-align: center;
-flex:1;
-justify-content: flex-end;
+justify-content: space-around;
 align-items: center;
+width:100%;
 padding:0;
+padding:1em 4em 0em 0em;
 }
 .nav-bar-right{
-margin:30px 0px 0px 90px;
+width:100%;
+justify-content: space-around;
 display:flex;
 text-align: center;
-flex:1;
-justify-content: flex-start;
 padding:0;
 align-items: center;
+padding:1em 0em 0em 4em;
 }
 .nav-bar-li{
   list-style-type: none;
@@ -191,7 +191,6 @@ align-items: center;
   overflow: hidden;
   z-index: 15;
   cursor: pointer;
-  margin:0px 30px 10px 30px;
 }
 .nav-bar-li>span{
   display:flex;
@@ -212,10 +211,10 @@ align-items: center;
 .nav-bar-li:hover span{
   transform:translateY(-100%)
 }
-.nav-bar-li:hover .svg-inline--fa.fa-biking.fa-w-20.fa-2x{
+.nav-bar-li:hover .svg-inline--fa.fa-biking.fa-w-20.fa-lg{
   /* transform:translateX(300%); */
   animation:
-    animate-x 1s linear infinite alternate;
+    animate-x 1s linear infinite;
 }
 @keyframes animate-x {
   from { transform: translateX(0%); } to { transform: translateX(180%); }
